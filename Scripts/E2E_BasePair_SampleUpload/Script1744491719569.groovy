@@ -53,7 +53,6 @@ try {
 	
 	WebUI.comment('Verify New Sample form')
 	String NewSample = CustomKeywords.'com.pages.Sample.newSample_Title'(v_ScreenshotPath)
-//	CustomKeywords.'com.utils.Screenshot.captureScreenShot'(v_ScreenshotPath)
 	assert WebUI.verifyMatch(NewSample, v_NewSample, false)
 	
 	WebUI.comment('Select file from the system & Verify if file is displayed in the form')
