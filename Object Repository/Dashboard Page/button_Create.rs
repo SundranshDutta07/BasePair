@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[contains(text(),'New project')]/following::span[contains(text(),'Create')]</value>
+         <value>(//span[contains(text(),'Create')])[2]/ancestor::button[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

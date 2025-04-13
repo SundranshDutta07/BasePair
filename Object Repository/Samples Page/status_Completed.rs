@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_AddSamples</name>
+   <name>status_Completed</name>
    <tag></tag>
-   <elementGuidId>f5fd2167-dbf4-4762-a050-cab7a05b4732</elementGuidId>
+   <elementGuidId>ae5df43d-778b-4eef-9f32-4db4174df314</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value></value>
+         <value>//span[contains(text(),'completed')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

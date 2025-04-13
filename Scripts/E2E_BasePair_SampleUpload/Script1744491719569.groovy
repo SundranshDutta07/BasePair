@@ -53,6 +53,7 @@ try {
 	
 	WebUI.comment('Verify New Sample form')
 	String NewSample = CustomKeywords.'com.pages.Sample.newSample_Title'(v_ScreenshotPath)
+//	CustomKeywords.'com.utils.Screenshot.captureScreenShot'(v_ScreenshotPath)
 	assert WebUI.verifyMatch(NewSample, v_NewSample, false)
 	
 	WebUI.comment('Select file from the system & Verify if file is displayed in the form')
@@ -61,10 +62,10 @@ try {
 	assert WebUI.verifyMatch(sampleName_File, 'true', false)
 	
 	WebUI.comment('Input the sample file name')
-	String NewSample = CustomKeywords.'com.pages.Sample.sampleName_Input'(v_SampleName, v_ScreenshotPath)
+	CustomKeywords.'com.pages.Sample.sampleName_Input'(v_SampleName, v_ScreenshotPath)
 	
-	WebUI.comment('Select project')
-	String NewSample = CustomKeywords.'com.pages.Sample.project_Dropdown'(v_ProjectName, v_ScreenshotPath)
+	WebUI.comment('Verify project')
+	CustomKeywords.'com.pages.Sample.project_DropdownVerify'(v_ProjectName, v_ScreenshotPath)
 	CustomKeywords.'com.utils.Screenshot.captureScreenShot'(v_ScreenshotPath)
 	
 	WebUI.comment('Add Tag')
@@ -81,6 +82,7 @@ try {
 	
 	WebUI.comment('Verify sample is displayed in the comment page')
 	String VerifySample= CustomKeywords.'com.pages.Sample.sampleName_Success'(v_SampleName,v_ScreenshotPath)
+	CustomKeywords.'com.utils.Screenshot.captureScreenShot'(v_ScreenshotPath)
 	assert WebUI.verifyMatch(VerifySample, 'true', false)	
 }
 

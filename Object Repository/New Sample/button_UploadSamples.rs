@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//span[contains(text(),'Upload samples')]</value>
+         <value>//span[contains(text(),'Upload samples')]/ancestor::button[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

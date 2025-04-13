@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>dropdown_Project</name>
+   <name>button_ViewList</name>
    <tag></tag>
-   <elementGuidId>65313b7f-60b8-4fb6-80b5-6b8eed47cab1</elementGuidId>
+   <elementGuidId>5effb132-5d77-4ca1-a68a-764c9190312b</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value> (//div[@class='ant-select-sm ant-select ant-select-enabled'])[2]</value>
+         <value>//span[contains(text(),'View')]/ancestor::button[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

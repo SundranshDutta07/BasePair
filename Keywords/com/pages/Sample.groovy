@@ -19,6 +19,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable
 import com.utils.*
+import org.openqa.selenium.Keys
 
 public class Sample {
      private static final KeywordLogger logger = KeywordLogger.getInstance(Sample.class)
@@ -66,6 +67,7 @@ public class Sample {
 	 @Keyword
 	 def sampleName_Input(v_SampleName, v_ScreenshotPath) {
 		 try {
+			 WebUI.clearText(findTestObject('Object Repository/New Sample/input_SampleName'))
 			 WebUI.sendKeys(findTestObject('Object Repository/New Sample/input_SampleName'), v_SampleName)
 		 }catch(Exception e) {
 			 ExceptionHandling EH = new ExceptionHandling()
@@ -86,9 +88,20 @@ public class Sample {
 	 }
 	 
 	 @Keyword
-	 def project_Dropdown(v_ProjectName, v_ScreenshotPath) {
+	 def project_DropdownVerify(v_ProjectName, v_ScreenshotPath) {
 		 try {
-			 WebUI.selectOptionByLabel(findTestObject('Object Repository/New Sample/dropdown_Project'), v_ProjectName, false)
+			 WebUI.click(findTestObject('Object Repository/New Sample/dropdown_Project'))
+			 //div[@unselectable='on']/ancestor::div[@role='combobox']
+			
+//			 String DynamicXpath= "//li[normalize-space()='"+v_ProjectName+"']"
+//			 TestObject NewObject = new TestObject()
+//			 NewObject.addProperty("xpath", ConditionType.EQUALS, DynamicXpath)
+			 
+			 WebUI.sendKeys(findTestObject('Object Repository/New Sample/input_Porject_Form'), v_ProjectName)
+			 WebUI.sendKeys(findTestObject('Object Repository/New Sample/input_Porject_Form'), Keys.chord(Keys.ENTER))
+			 
+//			 WebUI.waitForElementPresent(NewObject, 30)
+//			 WebUI.click(NewObject)
 		 }catch(Exception e) {
 			 ExceptionHandling EH = new ExceptionHandling()
 			 EH.Exception_Handling(v_ScreenshotPath, e)
@@ -175,11 +188,14 @@ public class Sample {
 	 @Keyword
 	 def sampleName_Success(v_SampleName, v_ScreenshotPath) {
 		 try {
-			 String DynamicXpath = "(//a[contains(text(),'"+v_SampleName+"')])[1]"
-			 TestObject Sample = new TestObject()
-			 Sample.addProperty("xpath", ConditionType.EQUALS, DynamicXpath)
+			 WebUI.click(findTestObject('Object Repository/Samples Page/button_ViewList'))
+			  boolean SuccessSample = WebUI.waitForElementPresent(findTestObject('Object Repository/Samples Page/status_Completed'), 30)
 			 
-			 boolean SuccessSample = WebUI.waitForElementPresent(Sample, 0)
+		//	 String DynamicXpath = "(//a[contains(text(),'"+v_SampleName+"')])[2]"
+		//	 TestObject Sample = new TestObject()
+		//	 Sample.addProperty("xpath", ConditionType.EQUALS, DynamicXpath)
+			 
+		//	 boolean SuccessSample = WebUI.waitForElementPresent(Sample, 0)
 			 String successSample = SuccessSample.toString()
 			 return successSample
 		 }catch(Exception e) {

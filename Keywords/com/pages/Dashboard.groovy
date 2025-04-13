@@ -73,7 +73,7 @@ public class Dashboard {
 	@Keyword
 	def projectCreated_Success(v_ScreenshotPath) {
 		try {
-			WebUI.waitForElementPresent(findTestObject('Object Repository/Dashboard Page/success_ProjectCreated'), 0)
+			//WebUI.waitForElementPresent(findTestObject('Object Repository/Dashboard Page/success_ProjectCreated'), 30)
 			String success = WebUI.getText(findTestObject('Object Repository/Dashboard Page/success_ProjectCreated'))
 			return success
 		}catch(Exception e) {
@@ -86,10 +86,10 @@ public class Dashboard {
 	@Keyword
 	def project_List(v_ProjectName, v_ScreenshotPath) {
 		try {
-			String DynamicXpath= "//div[@class='project-summary']/following::h1[contains(text(),'"+v_ProjectName+"')]"
+			String DynamicXpath= "(//div[@class='dashboard-content-header'])[1]/following::h1[contains(text(),'"+v_ProjectName+"')]"
 			TestObject NewProject = new TestObject()
 			NewProject.addProperty("xpath", ConditionType.EQUALS, DynamicXpath)
-			boolean project = WebUI.waitForElementPresent(NewProject, 0)
+			boolean project = WebUI.waitForElementPresent(NewProject, 30)
 			String Project = project.toString()
 			return Project
 		}catch(Exception e) {
@@ -102,7 +102,7 @@ public class Dashboard {
 	@Keyword
 	def addSamples_Button(v_ProjectName,v_ScreenshotPath) {
 		try {
-			String DynamicXpath = "(//h1[contains(text(),'"+v_ProjectName+"')])[1]/following::span[contains(text(),'Add Samples')][1]"
+			String DynamicXpath = "(//h1[contains(text(),'"+v_ProjectName+"')])[1]/following::button[@class='ant-btn ant-btn-link'][1]"
 			TestObject AddSample = new TestObject()
 			AddSample.addProperty("xpath", ConditionType.EQUALS, DynamicXpath)
 			WebUI.click(AddSample)

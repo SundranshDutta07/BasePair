@@ -119,7 +119,7 @@
       <name>v_username</name>
    </variable>
    <variable>
-      <defaultValue>'Sundransh@07'</defaultValue>
+      <defaultValue>'Qsf&amp;@43er!sd#4'</defaultValue>
       <description></description>
       <id>65b5f306-3003-4731-bc90-776f377f3465</id>
       <masked>false</masked>
@@ -133,7 +133,7 @@
       <name>v_DashboardTitle</name>
    </variable>
    <variable>
-      <defaultValue>'SundranshAutomation'</defaultValue>
+      <defaultValue>'Sundransh Automation9'</defaultValue>
       <description></description>
       <id>02fdb230-0d6c-4590-bc16-bf299b7465f7</id>
       <masked>false</masked>
@@ -147,7 +147,7 @@
       <name>v_ProjectCreated_MSG</name>
    </variable>
    <variable>
-      <defaultValue>'New Sample'</defaultValue>
+      <defaultValue>'New sample'</defaultValue>
       <description></description>
       <id>e112bb3e-2f67-4ce4-835b-8ef48036faa0</id>
       <masked>false</masked>
@@ -161,7 +161,7 @@
       <name>v_filePath</name>
    </variable>
    <variable>
-      <defaultValue>'TestKatalon'</defaultValue>
+      <defaultValue>'TestKatalonS'</defaultValue>
       <description></description>
       <id>45726d11-b6a1-466e-993c-5e5b2373a637</id>
       <masked>false</masked>
@@ -182,7 +182,7 @@
       <name>v_Value</name>
    </variable>
    <variable>
-      <defaultValue>'Sample added successfully'</defaultValue>
+      <defaultValue>'Sample added successfully.View list'</defaultValue>
       <description></description>
       <id>46b193d8-a112-4d18-a7aa-c093149b6309</id>
       <masked>false</masked>
