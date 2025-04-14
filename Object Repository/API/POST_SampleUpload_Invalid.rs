@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>POST_SampleUpload_InvalidFile</name>
+   <name>POST_SampleUpload_Invalid</name>
    <tag></tag>
-   <elementGuidId>cfca4567-1dc3-40ff-ae82-0251da334b82</elementGuidId>
+   <elementGuidId>69232bd7-2c83-4e7a-81d9-0f4ffb2766d0</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
