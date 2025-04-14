@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>POST_SampleUpload_Success</name>
+   <name>POST_SampleUpload_SuccessFile</name>
    <tag></tag>
-   <elementGuidId>703ef4c5-35fc-4742-aa42-4c5707fed624</elementGuidId>
+   <elementGuidId>f8f5369b-4d40-42aa-9bea-08f0012a3a4d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
